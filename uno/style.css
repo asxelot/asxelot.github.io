@@ -44,7 +44,7 @@ ul li:nth-child(odd) {
   display: inline-block;
   width: var(--card-w);
   height: var(--card-h);
-  background-image: url('./uno/deck.png');
+  background-image: url('./deck.png');
   background-repeat: no-repeat;
 }
 
