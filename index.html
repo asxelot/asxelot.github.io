@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>UNO Counter</title>
+</head>
+<body>
+  <div id="app">
+    <div v-if="state === 'game'" class="screen">
+      <ul>
+        <li v-for="user in users" v-on:click="showUser(user)" class="user">
+          <span class="name">{{ user.name }}</span>
+          <b class="score">{{ user.score }}</b>
+        </li>
+      </ul>
+
+      <div class="bottom-buttons">
+        <button @click="addUser">add user</button>
+        <button @click="reset">reset</button>
+      </div>
+    </div>
+
+    <div v-if="state === 'score'" class="screen">
+      <div class="user">
+        <span class="name">{{ currentUser.name }}</span>
+        <b class="score">{{ currentUser.score }}</b>
+      </div>
+      <div id="cards" class="cards">
+        <span :class="card.name" v-for="(card, index) in selectedCards" v-on:click="remove(index)"></span>
+      </div>
+      <div class="buttons">
+        <div v-for="row in buttons" class="buttons-row">
+          <span v-for="btn in row" :class="btn.name" @click="add(btn)"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

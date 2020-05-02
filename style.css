@@ -1,0 +1,198 @@
+:root {
+  --card-w: 86px;
+  --card-h: 134px;
+}
+button {
+  font-size: 15px;
+}
+ul li {
+  padding: 18px;
+}
+ul li:nth-child(odd) {
+  background: #f3f1f1;
+}
+.screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  min-height: 700px;
+}
+.user {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  margin: 12px;
+}
+.cards {
+  display: flex;
+  margin: 10px 10px 10px 66px;
+  min-height: var(--card-h);
+}
+.cards .card {
+  margin-left: -66px;
+}
+.buttons, .buttons-row {
+  width: 100%;
+}
+.buttons-row {
+  display: flex;
+  justify-content: space-around;
+}
+.card {
+  display: inline-block;
+  width: var(--card-w);
+  height: var(--card-h);
+  background-image: url('./img/deck.png');
+  background-repeat: no-repeat;
+}
+
+.red {
+  --y: 1;
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.yellow {
+  --y: 2;
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.green {
+  --y: 3;
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.blue {
+  --y: 4;
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+
+.one {
+  --x: 1;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+}
+.two {
+  --x: 2;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+}
+.three {
+  --x: 3;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+}
+.four {
+  --x: 4;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+}
+.five {
+  --x: 5;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+}
+.six {
+  --x: 6;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+}
+.seven {
+  --x: 7;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+}
+.eight {
+  --x: 8;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+}
+.nine {
+  --x: 9;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+}
+.zero {
+  --x: 10;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+}
+
+.skip-red {
+  --x: 1;
+  --y: 5;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.reverse-red {
+  --x: 2;
+  --y: 5;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.draw-two-red {
+  --x: 3;
+  --y: 5;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.skip-yellow {
+  --x: 4;
+  --y: 5;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.reverse-yellow {
+  --x: 5;
+  --y: 5;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.draw-two-yellow {
+  --x: 6;
+  --y: 5;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.skip-green {
+  --x: 7;
+  --y: 5;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.reverse-green {
+  --x: 8;
+  --y: 5;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.draw-two-green {
+  --x: 9;
+  --y: 5;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.skip-blue {
+  --x: 10;
+  --y: 5;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.reverse-blue {
+  --x: 1;
+  --y: 6;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.draw-two-blue {
+  --x: 2;
+  --y: 6;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.wild {
+  --x: 3;
+  --y: 6;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.wild-draw-four {
+  --x: 5;
+  --y: 6;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
+.unknown {
+  --x: 10;
+  --y: 7;
+  background-position-x: calc(var(--card-w) * calc(var(--x) * -1 + 1));
+  background-position-y: calc(var(--card-h) * calc(var(--y) * -1 + 1));
+}
