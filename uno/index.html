@@ -27,12 +27,14 @@
         <span class="name">{{ currentUser.name }}</span>
         <b class="score">{{ currentUser.score }}</b>
       </div>
-      <div id="cards" class="cards">
-        <span :class="card.name" v-for="(card, index) in selectedCards" v-on:click="remove(index)"></span>
-      </div>
-      <div class="buttons">
-        <div v-for="row in buttons" class="buttons-row">
-          <span v-for="btn in row" :class="btn.name" @click="add(btn)"></span>
+      <div class="grid">
+        <div id="cards" class="cards">
+          <span :class="card.name" v-for="(card, index) in selectedCards" v-on:click="remove(index)"></span>
+        </div>
+        <div class="buttons">
+          <div v-for="row in buttons" class="buttons-row">
+            <span v-for="btn in row" :class="btn.name" @click="add(btn)"></span>
+          </div>
         </div>
       </div>
     </div>
